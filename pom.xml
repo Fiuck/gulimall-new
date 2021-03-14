@@ -32,6 +32,7 @@
         <httpcore.version>4.4.13</httpcore.version>
         <springboot.version>2.4.3</springboot.version>
         <lombok.version>1.18.18</lombok.version>
+        <mysql.driver.version>8.0.23</mysql.driver.version>
     </properties>
 
     <dependencies>
@@ -70,7 +71,13 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
             </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.driver.version}</version>
+            </dependency>
         </dependencies>
+
     </dependencyManagement>
 
 
