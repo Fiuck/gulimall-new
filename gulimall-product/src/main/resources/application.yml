@@ -4,6 +4,13 @@ spring:
     username: root
     password: root
     url: jdbc:mysql://192.168.56.10:3306/gulimall_pms?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.56.10:8848
+  application:
+    name: gulimall-product
+
 
 mybatis-plus:
   mapper-locations: classpath:/mapper/**.xml
@@ -12,3 +19,6 @@ mybatis-plus:
       id-type: auto
   configuration:
     log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+
+server:
+  port: 11000

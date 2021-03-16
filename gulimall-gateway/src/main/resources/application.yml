@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: gulimall-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.56.10:8848
+    gateway:
+      routes:
+        - id: query_route
+          uri: https://www.baidu.com
+          predicates:
+            - Query=name,baidu
+        - id: query_route2
+          uri: https://lemcoo.top
+          predicates:
+            - Query=name,lemcoo
+server:
+  port: 10000
+
+
